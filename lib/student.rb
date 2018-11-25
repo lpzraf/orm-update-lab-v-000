@@ -57,8 +57,8 @@ end
   end
   
    def update
-    sql = "UPDATE students SET name = ?, grade = ? WHERE name = ?"
-    DB[:conn].execute(sql, self.name, self.grade, self.grade)
+    sql = "UPDATE students SET id = ?, name = ? WHERE grade = ?"
+    DB[:conn].execute(sql, self.id, self.name, self.grade)
   end
   
     def self.new_from_db(row)
